@@ -1,0 +1,22 @@
+# ===== Frontend =====
+shopsync_frontzip/frontend/node_modules/
+shopsync_frontzip/frontend/dist/
+shopsync_frontzip/frontend/.env.local
+shopsync_frontzip/frontend/.env.development.local
+shopsync_frontzip/frontend/.env.test.local
+
+# ===== Backend =====
+shopsync_backkzip/backend/target/
+shopsync_backkzip/backend/.classpath
+shopsync_backkzip/backend/.project
+shopsync_backkzip/backend/.settings/
+
+# ===== IDE =====
+.idea/
+*.iml
+.vscode/
+*.swp
+
+# ===== OS =====
+.DS_Store
+Thumbs.db
