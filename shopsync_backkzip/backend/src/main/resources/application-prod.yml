@@ -8,19 +8,23 @@ spring:
     password: ${DATABASE_PASSWORD}
     driver-class-name: com.mysql.cj.jdbc.Driver
     hikari:
-      connection-timeout: 30000
-      maximum-pool-size: 5
+      connection-timeout: 60000
+      maximum-pool-size: 3
+      minimum-idle: 1
+      idle-timeout: 300000
+      initialization-fail-timeout: -1
 
   jpa:
     hibernate:
       ddl-auto: update
     show-sql: false
-    # No dialect needed — Hibernate 6 auto-detects MySQL
 
 logging:
   level:
-    root: WARN
-    com.shopsync: INFO
+    root: INFO
+    com.shopsync: DEBUG
+    com.zaxxer.hikari: DEBUG
+    org.springframework.jdbc: DEBUG
 
 jwt:
   secret: ${JWT_SECRET}
